@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            face
+        </title>
+    </head>
+    <body>
+       <script>
+        
+        function move(n){
+          console.log(n);
+          var m=n.length;
+          var x=4;
+          var y=0;
+          if(m==2)
+          {
+              var nu=n.slice(1,2);
+              var ap=n.slice(0,1);
+          }
+          else{
+              var nu = n.slice(2, 3);
+              var ap = n.slice(0, 2);
+          }
+           console.log(nu,ap);
+        moving(nu,ap,x,y);
+        }
+    
+        function moving(nu,ap,x,y){
+            var nu= parseInt(nu);
+          switch(ap)
+          {
+           
+           case 'n':
+           var x=y+nu;
+           if(x<8 && x>=0)
+           {
+                console.log("out of boundary N");
+           }
+           else
+           {
+            console.log(x);
+           }
+           break;
+           case 's':
+                  var x = x + nu;
+                  if (x < 8)
+                  {
+                      console.log(x);
+                      console.log("out of boundary S");
+                  }
+                  else 
+                  {
+                      console.log(x);
+                  }
+            break
+           
+           
+
+          }
+
+        }
+       </script>
+
+
+    </body>
+</html>
